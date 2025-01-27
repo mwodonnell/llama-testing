@@ -1,4 +1,7 @@
 from vllm import LLM
+import logging
+
+logger = logging.getLogger()
 
 # Load the model
 model = LLM(
@@ -10,3 +13,5 @@ prompt = "Tell me a joke"
 
 # Generate text
 output = model.generate(prompt)
+
+print(output)
